@@ -1,9 +1,8 @@
 import pdfMake from "pdfmake/build/pdfmake";
 import { TDocumentDefinitions } from "pdfmake/interfaces";
 import { QrCodePix } from "qrcode-pix";
-import { content } from "./content";
+import { content } from "./config/content";
 import vfsFonts from 'pdfmake/build/vfs_fonts';
-// import { uuid41 } from "./utils/uuid";
 const { vfs } = vfsFonts;
 pdfMake.vfs = vfs;
 
@@ -71,7 +70,6 @@ export const download = (data: IBoleto) => {
       key: pix,
       name: receiver,
       city: city,
-      // transactionId: uuid41(),
       transactionId: `${i + 1}de${qtyInstallments}${product.replace(/\s/g, "")}`.substring(0, 25),
       message: `Parcela ${i + 1} de ${qtyInstallments} - ${product}`,
       value: valor

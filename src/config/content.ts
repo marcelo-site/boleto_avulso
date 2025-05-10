@@ -1,4 +1,4 @@
-import { IBoleto } from "./submit";
+import { IBoleto } from "../submit";
 
 export interface IData extends IBoleto {
   parcela: string;

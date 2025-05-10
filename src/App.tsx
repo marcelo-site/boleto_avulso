@@ -4,8 +4,6 @@ import { download } from "./submit";
 import { mascaraMoeda } from "./utils/inputMoeda";
 import { ReactComponent as IconExit } from "./x-circle-fill.svg"
 
-
-
 function App() {
   const [showErrorModal, setShowErrorModal] = useState("")
   const [data, setData] = useState({
@@ -123,6 +121,7 @@ function App() {
             handleValue={handleData}
             label="Quantidade de Parcelas"
             id="qtyInstallments"
+            type="number"
           />
           <div className="form-control">
             <label htmlFor="">Instruções</label>
