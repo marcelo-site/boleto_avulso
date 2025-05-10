@@ -65,64 +65,65 @@ function App() {
         <form action="" className="form" onSubmit={submit}>
           <Input
             value={data.receiver}
-            handleValue={handleData}
+            onChange={handleData}
             label="Recebedor"
             id="receiver"
           />
           <Input
             value={data.city}
-            handleValue={handleData}
+            onChange={handleData}
             label="Cidade do Recebedor"
             id="city"
           />
           <Input
             value={data.locationPayment}
-            handleValue={handleData}
+            onChange={handleData}
             label="Local de pagamento"
             id="locationPayment"
           />
           <Input
             value={data.product}
-            handleValue={handleData}
-            label="Produto/Serviço"
+            onChange={handleData}
+            label="Produto / Serviço"
             id="product"
           />
           <Input
             value={data.value}
-            handleValue={({ target }) => {
+            onChange={({ target }) => {
               setData((prev) => ({ ...prev, value: mascaraMoeda(target.value) }))
             }}
             label="Valor"
             id="valor"
           />
-
-          <Input
-            value={data.payer}
-            handleValue={handleData}
-            label="Pagador"
-            id="payer"
-          />
-          <Input
-            value={data.date}
-            handleValue={handleData}
-            label="Primeira Parcela"
-            id="date"
-            type="date"
-          />
           <Input
             value={data.pix}
-            handleValue={handleData}
+            onChange={handleData}
             label="Chave Pix"
             id="pix"
           />
-
           <Input
-            value={data.qtyInstallments}
-            handleValue={handleData}
-            label="Quantidade de Parcelas"
-            id="qtyInstallments"
-            type="number"
+            value={data.payer}
+            onChange={handleData}
+            label="Pagador"
+            id="payer"
           />
+          <div>
+            <Input
+              value={data.qtyInstallments}
+              onChange={handleData}
+              label="Quantidade de Parcelas"
+              id="qtyInstallments"
+              type="number"
+            />
+            <Input
+              value={data.date}
+              onChange={handleData}
+              label="Primeira Parcela"
+              id="date"
+              type="date"
+            />
+          </div>
+
           <div className="form-control">
             <label htmlFor="">Instruções</label>
             <textarea

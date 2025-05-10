@@ -1,27 +1,18 @@
-import { ChangeEvent } from "react"
+import { ComponentProps } from "react"
 
-export const Input = ({
-  value,
-  label,
-  type,
-  id,
-  handleValue
-}: {
-  label: string,
-  id: string
-  type?: string
-  value: string,
-  handleValue: (e: ChangeEvent<HTMLInputElement>) => void
-}) => {
+interface IInput extends ComponentProps<"input"> {
+  label: string
+}
+
+export const Input = ({ label, type, id, ...rest }: IInput) => {
   return (
     <div className="form-control">
       <label htmlFor={id}>{label}</label>
       <input
+        {...rest}
         type={type || "text"}
         name={id}
         id={id}
-        value={value}
-        onChange={handleValue}
       />
     </div>
   )

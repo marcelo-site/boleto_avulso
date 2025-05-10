@@ -72,10 +72,11 @@ main,
 .form-control input,
 .form-control textarea {
   font-size: 1.125rem;
-  padding: 8px 10px;
+  padding: 12px 16px;
   border-radius: 5px;
   border: 1px solid var(--border-color);
   outline: none;
+  color: #4d4d4d;
 }
 
 .form-control label {
