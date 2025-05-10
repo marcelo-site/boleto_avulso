@@ -3,7 +3,7 @@ import { TDocumentDefinitions } from "pdfmake/interfaces";
 import { QrCodePix } from "qrcode-pix";
 import { content } from "./content";
 import vfsFonts from 'pdfmake/build/vfs_fonts';
-import { uuid41 } from "./utils/uuid";
+// import { uuid41 } from "./utils/uuid";
 const { vfs } = vfsFonts;
 pdfMake.vfs = vfs;
 
