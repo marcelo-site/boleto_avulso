@@ -12,7 +12,7 @@ body {
   width: 100vw;
   max-width: 100vw;
   overflow-x: hidden;
-  padding: 5px;
+  padding: 1rem 5px 2rem;
   color: #2f2f2f;
   margin: auto;
   background-color: #fafafa;
@@ -51,7 +51,7 @@ main,
 }
 
 .form button {
-  background: black;
+  background: #2f2f2f;
   color: white;
   border: 0;
   font-size: 1.25rem;
@@ -118,4 +118,19 @@ main,
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+footer {
+  background: #2f2f2f;
+  color: white;
+  padding: .75rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  a {
+    color: inherit;
+  }
 }
