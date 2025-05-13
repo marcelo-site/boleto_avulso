@@ -56,13 +56,13 @@ function App() {
     <div className="App">
       <main>
         <div className="header">
-          <h1>BOLETO AVULSO</h1>
+          <h1>CARNÊ AVULSO</h1>
           <div className="icon">
             <img src={`${process.env.PUBLIC_URL}/boleto.png`} alt="" />
           </div>
         </div>
 
-        <form action="" className="form" onSubmit={submit}>
+        <form className="form" onSubmit={submit}>
           <Input
             value={data.receiver}
             onChange={handleData}

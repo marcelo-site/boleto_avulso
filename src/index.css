@@ -6,6 +6,7 @@
 
 :root {
   --border-color: rgb(161 161 161);
+  --border-color: rgb(214 214 214);
   --color-default: #2f2f2f;
 }
 
@@ -17,6 +18,13 @@ body {
   color: var(--color-default);
   margin: auto;
   background-color: #fafafa;
+}
+
+main {
+  padding: 1rem;
+  background: #eeeeee45;
+  background: #f5f3f345;
+  border: 1px solid rgb(214 214 214);
 }
 
 .header {
@@ -31,6 +39,7 @@ body {
 
   img {
     width: 96px;
+    border-radius: 12px;
   }
 
   @media (max-width: 600px) {
