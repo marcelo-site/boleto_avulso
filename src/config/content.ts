@@ -4,7 +4,6 @@ export interface IData extends IBoleto {
   parcela: string;
 }
 
-console.log(process.env.PUBLIC_URL)
 export const content = (data: IData) => {
   const instrution: {
     text: string, lineHeight: number, fontSize: number, bold?: boolean
@@ -121,40 +120,37 @@ export const content = (data: IData) => {
               border: [true, true, true, true],
               text: [
                 {
-                  margin: [5, 5, 5, 5],
                   text: "\n",
-                  fontSize: 9,
                   lineHeight: .25,
                 },
                 {
-                  margin: [5, 5, 5, 5],
-                  text: "Data recebimento:  ",
-                  // bold: true,
+                  text: "Recebimento :  ",
                   fontSize: 9,
-                  lineHeight: 1.8,
+                  lineHeight: 2,
                 },
                 {
                   text: "_____/_____/_____\n",
                 },
                 {
-                  text: "Tipo de pagamento\n",
+                  text: "Forma de pagamento\n",
                   lineHeight: 1.5,
                   fontSize: 7
                 },
                 {
                   text: "Espécie [  ]   Pix [  ]   Transferência [  ]   Outros [  ]",
-                  lineHeight: 2,
+                  lineHeight: 3.5,
                   bold: true,
                   fontSize: 8
                 },
+
                 {
-                  text: "\nAssinatura recebedor\n",
-                  lineHeight: 2,
-                  fontSize: 7
+                  text: "\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n",
+                  lineHeight: 1.2,
                 },
                 {
-                  text: "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n",
-                  lineHeight: 1.5,
+                  text: "Assinatura recebedor\n",
+                  lineHeight: 1.2,
+                  fontSize: 7,
                 },
               ]
             },

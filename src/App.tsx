@@ -15,7 +15,7 @@ function App() {
     date: "",
     pix: "",
     city: "",
-    instrution: "",
+    instrution: "Pague com pix escaneando o qr code ao ladore no app do seu Banco",
     qtyInstallments: ""
   })
 
@@ -130,6 +130,7 @@ function App() {
               name="instrution"
               id="instrution"
               onChange={({ target }) => setData((prev) => ({ ...prev, [target.name]: target.value }))}
+              value={data.instrution}
             ></textarea>
           </div>
           <button>Criar Boleto</button>
