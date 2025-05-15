@@ -96,7 +96,7 @@ export const download = (data: IBoleto) => {
     content: installmentsContent,
     pageBreakBefore,
     defaultStyle: {
-
+      color: "#1d1d1d"
     }
 
     // layout: {
