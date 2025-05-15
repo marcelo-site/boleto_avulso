@@ -95,6 +95,18 @@ export const download = (data: IBoleto) => {
     pageSize: "A4",
     content: installmentsContent,
     pageBreakBefore,
+    defaultStyle: {
+
+    }
+
+    // layout: {
+    //   hLineWidth: function () {
+    //     return 0.5;
+    //   },
+    //   vLineWidth: function () {
+    //     return 0.75;
+    //   }
+    // },
   }
 
   pdfMake.createPdf(docDefinition).download("boleto-" + data.product.replace(/\s/g, "-"));
