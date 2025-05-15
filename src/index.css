@@ -6,9 +6,7 @@
 }
 
 :root {
-  /* --border-color: rgb(161 161 161); */
   --border-color: rgb(214 214 214);
-  /* --color-default: #2f2f2f; */
   --color-default: #484848;
 }
 
@@ -53,10 +51,6 @@ a {
 @media (max-width: 640px) {
   body {
     padding: 0;
-  }
-
-  .header h1 {
-    font-size: 1.25rem;
   }
 
   .header img {
