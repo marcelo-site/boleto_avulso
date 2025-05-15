@@ -126,23 +126,65 @@ export const content = (data: IData) => {
                 {
                   text: "Recebimento :  ",
                   fontSize: 9,
-                  lineHeight: 2,
+                  lineHeight: 2.4,
                 },
                 {
                   text: "_____/_____/_____\n",
+                  fontSize: 12,
                 },
                 {
                   text: "Forma de pagamento\n",
-                  lineHeight: 1.5,
+                  lineHeight: 1.2,
                   fontSize: 7
                 },
                 {
-                  text: "Espécie [  ]   Pix [  ]   Transferência [  ]   Outros [  ]",
+                  text: "Espécie ",
                   lineHeight: 3.5,
                   bold: true,
                   fontSize: 8
                 },
-
+                {
+                  text: "[]",
+                  characterSpacing: 6,
+                  lineHeight: 3.5,
+                  fontSize: 8
+                },
+                {
+                  text: "   Pix ",
+                  lineHeight: 3.5,
+                  bold: true,
+                  fontSize: 8
+                },
+                {
+                  text: "[]",
+                  characterSpacing: 6,
+                  lineHeight: 3.5,
+                  fontSize: 8
+                },
+                {
+                  text: "   Transferência ",
+                  lineHeight: 3.5,
+                  bold: true,
+                  fontSize: 8
+                },
+                {
+                  text: "[]",
+                  characterSpacing: 6,
+                  lineHeight: 3.5,
+                  fontSize: 8
+                },
+                {
+                  text: "   Outros ",
+                  lineHeight: 3.5,
+                  bold: true,
+                  fontSize: 8
+                },
+                {
+                  text: "[]",
+                  characterSpacing: 6,
+                  lineHeight: 3.5,
+                  fontSize: 8
+                },
                 {
                   text: "\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n",
                   lineHeight: 1.2,
@@ -151,6 +193,7 @@ export const content = (data: IData) => {
                   text: "Assinatura recebedor\n",
                   lineHeight: 1.2,
                   fontSize: 7,
+
                 },
               ]
             },

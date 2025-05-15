@@ -15,7 +15,7 @@ function App() {
     date: "",
     pix: "",
     city: "",
-    instrution: "Pague com pix escaneando o qr code ao ladore no app do seu Banco",
+    instrution: "Pague com pix escaneando o qr code, confira o valor e confirme o pagamento",
     qtyInstallments: ""
   })
 
@@ -53,12 +53,12 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <main>
+    <div className="App flex-center">
+      <main className="">
         <div className="header">
           <h1>CARNÊ AVULSO</h1>
           <div className="icon">
-            <img src={`${process.env.PUBLIC_URL}/boleto.png`} alt="" />
+            <img src={`${process.env.PUBLIC_URL}/carne.png`} alt="" />
           </div>
         </div>
 
@@ -68,24 +68,28 @@ function App() {
             onChange={handleData}
             label="Recebedor"
             id="receiver"
+            placeholder="Informe o nome de quem vai receber"
           />
           <Input
             value={data.city}
             onChange={handleData}
             label="Cidade do Recebedor"
             id="city"
+            placeholder="Informe a cidade de quem vai receber"
           />
           <Input
             value={data.locationPayment}
             onChange={handleData}
             label="Local de pagamento"
             id="locationPayment"
+            placeholder="Informe um local para pagamento"
           />
           <Input
             value={data.product}
             onChange={handleData}
             label="Produto / Serviço"
             id="product"
+            placeholder="Indentifique o produto ou serviço prestado"
           />
           <Input
             value={data.value}
@@ -100,12 +104,14 @@ function App() {
             onChange={handleData}
             label="Chave Pix"
             id="pix"
+            placeholder="Informe a chave pix de recebimento"
           />
           <Input
             value={data.payer}
             onChange={handleData}
             label="Pagador"
             id="payer"
+            placeholder="Informe o nome de quem vai pagar"
           />
           <div>
             <Input
@@ -114,6 +120,7 @@ function App() {
               label="Quantidade de Parcelas"
               id="qtyInstallments"
               type="number"
+              placeholder="Informe a quantidade de parcelas"
             />
             <Input
               value={data.date}
@@ -131,6 +138,7 @@ function App() {
               id="instrution"
               onChange={({ target }) => setData((prev) => ({ ...prev, [target.name]: target.value }))}
               value={data.instrution}
+              placeholder="Informe as instruções para ajudar no pagamento"
             ></textarea>
           </div>
           <button>Criar Boleto</button>
