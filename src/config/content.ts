@@ -4,18 +4,6 @@ export interface IData extends IBoleto {
   parcela: string;
 }
 
-const layout = {
-  vLineColor: '#4c4c4c',
-  hLineColor: '#4c4c4c',
-  hLineWidth: function () {
-    return 0.1;
-  },
-  vLineWidth: function () {
-    return 0.1;
-  },
-
-}
-
 export const content = (data: IData) => {
   const instrution: {
     text: string, lineHeight: number, fontSize: number, bold?: boolean
@@ -40,7 +28,6 @@ export const content = (data: IData) => {
         dontBreakRows: false,
         body: [
           [
-
             {
               border: [true, true, true, false],
               marginRight: 5,
@@ -223,17 +210,18 @@ export const content = (data: IData) => {
               border: [false, false, false, true],
             },
             {
-              marginLeft: 2,
+
               qr: data.pix,
               fit: '120',
               border: [false, false, true, true],
               alignment: "right",
-              padding: 2
+              marginRight: -1,
+              padding: 0.5
             },
           ],
         ],
       },
-      layout
+      layout: "exampleLayout"
     },
     {
       table: {
@@ -255,7 +243,6 @@ export const content = (data: IData) => {
           },
         ]]
       },
-      layout
     },
 
     { text: "\n", lineHeight: 1.2 }

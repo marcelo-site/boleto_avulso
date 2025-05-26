@@ -3,6 +3,7 @@ import { TDocumentDefinitions } from "pdfmake/interfaces";
 import { QrCodePix } from "qrcode-pix";
 import { content } from "./config/content";
 import vfsFonts from 'pdfmake/build/vfs_fonts';
+import { tableLayouts } from "./config/stylePdf";
 const { vfs } = vfsFonts;
 pdfMake.vfs = vfs;
 
@@ -18,6 +19,8 @@ export interface IBoleto {
   instrution: string;
   qtyInstallments: string;
 }
+
+pdfMake.tableLayouts = tableLayouts
 
 function pageBreakBefore(
   currentNode: { pageNumbers: string | any[]; },
@@ -48,7 +51,7 @@ export const download = (data: IBoleto) => {
   const dayVenc = date.getDate() > 30 ? 30 : date.getDate();
   let monthVenc = date.getMonth();
   let yearVenc = date.getFullYear()
-  const installmentsContent = [];
+  const installmentsContent: any[] = [];
 
   const valor = Number(value.replace(/\./g, "").replace(",", ".").replace(/R\$/, "").trim());
 
@@ -98,15 +101,6 @@ export const download = (data: IBoleto) => {
     defaultStyle: {
       color: "#1d1d1d"
     }
-
-    // layout: {
-    //   hLineWidth: function () {
-    //     return 0.5;
-    //   },
-    //   vLineWidth: function () {
-    //     return 0.75;
-    //   }
-    // },
   }
 
   pdfMake.createPdf(docDefinition).download("boleto-" + data.product.replace(/\s/g, "-"));
